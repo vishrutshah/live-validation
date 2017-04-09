@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 // This responds a POST request for the homepage
 app.post('/semantic/validate', function (req, res) {
     console.log("Got a POST request for the /semantic/validate");
-    // console.log(req.body);
+    res.send(req.body);
     // if (req.body && req.body.swagger) {
     //     let swagger = req.body.swagger
     //     oav.validateSpec(swagger).then((result) => {
@@ -25,7 +25,7 @@ app.post('/semantic/validate', function (req, res) {
     //         res.send(err);
     //     });
     // }
-    res.send("Got a POST request for the /semantic/validate");
+    // res.send("Got a POST request for the /semantic/validate");
 })
 
 var port = process.env.PORT || 1337;
