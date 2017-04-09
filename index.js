@@ -13,18 +13,18 @@ app.get('/', function (req, res) {
 // This responds a POST request for the homepage
 app.post('/semantic/validate', function (req, res) {
     console.log("Got a POST request for the /semantic/validate");
-    console.log(req.body);
-    console.log();
-    if (req.body && req.body.swagger) {
-        let swagger = req.body.swagger
-        oav.validateSpec(swagger).then((result) => {
-            console.dir(result, { depth: null, colors: true });
-            res.send(result);
-        }).catch((err) => {
-            console.dir(err, { depth: null, colors: true });
-            res.send(err);
-        });
-    }
+    // console.log(req.body);
+    // if (req.body && req.body.swagger) {
+    //     let swagger = req.body.swagger
+    //     oav.validateSpec(swagger).then((result) => {
+    //         console.dir(result, { depth: null, colors: true });
+    //         res.send(result);
+    //     }).catch((err) => {
+    //         console.dir(err, { depth: null, colors: true });
+    //         res.send(err);
+    //     });
+    // }
+    res.send("Got a POST request for the /semantic/validate");
 })
 
 var port = process.env.PORT || 1337;
